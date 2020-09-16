@@ -1,0 +1,87 @@
+.header
+  min-height: 78px
+
+.header__wrap
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+  padding: 14px 20px
+
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05)
+  transition: box-shadow 100ms ease
+
+  &--opened
+    box-shadow: none
+
+.header__nav-wrap
+  width: 100%
+  height: calc(100vh - 184px)
+  padding-top: 106px
+
+  transform: translateX(100%)
+  transition: transform 250ms ease-out
+
+  &--opened
+    transform: translateX(0)
+
+
+.menu-btn
+  width: 28px
+  height: 28px
+  margin-top: 18px
+  padding: 0
+
+  background-color: transparent
+  background-repeat: no-repeat
+  border: none
+
+  cursor: pointer
+
+  &--closed
+    background-image: url("../images/burger-icon.svg")
+
+  &--opened
+    background-image: url("../images/cross-icon.svg")
+
+.nav__list
+  @include list-reset
+
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.nav__item
+  width: 100%
+  text-align: center
+  cursor: pointer
+
+  &:not(:last-child)
+    margin-bottom: 40px
+
+  a
+    width: 100%
+    display: block
+
+    font-size: 36px
+    line-height: 43px
+
+.social
+  @include list-reset
+
+  display: flex
+  justify-content: space-between
+
+  width: 335px
+  margin: 123px auto 0 auto
+
+  a
+    font-size: 24px
+    line-height: 29px
+    text-transform: uppercase
+
+
+.social a,
+.nav__item a
+  color: $secondary-font-color
+  text-decoration: none
