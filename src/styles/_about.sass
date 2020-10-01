@@ -1,0 +1,123 @@
+.about
+    margin-top: 82px
+    margin-bottom: 140px
+
+    @media (min-width: $mw-tablet)
+
+    @media (min-width: $mw-tablet-lg)
+
+    @media (min-width: $mw-desktop)
+
+    
+.about__photo-wrap
+    position: relative
+
+    margin-bottom: 140px
+
+    img
+        width: 335px
+        height: 335px
+
+    &:before 
+        content: ""
+        position: absolute
+        top: 197px
+        left: 250px
+
+        width: 230px
+        height: 230px
+
+        background-image: url("../images/circle-text.svg")
+        background-size: 100%
+        background-repeat: no-repeat
+
+    @media (min-width: $mw-tablet)
+        margin-bottom: 140px
+
+        img 
+            width: 720px
+            height: 720px
+
+        &:before
+            top: 491px
+            left: 573px
+
+            width: 377px
+            height: 377px
+
+    @media (min-width: $mw-tablet-lg)
+        margin-bottom: 200px
+
+        img 
+            width: 710px
+            height: 710px
+        
+        &:before 
+            top: 477px
+            left: 561px
+
+    @media (min-width: $mw-desktop)
+        margin-bottom: 250px
+
+        img 
+            width: 830px
+            height: 830px
+        
+        &:before
+            top: 542px
+            left: 652px
+            
+            width: 476px
+            height: 476px
+
+.about__header
+    margin: 0
+    margin-bottom: 40px
+    
+    font-family: "Cormorant Garamond", serif
+    font-size: 48px
+    line-height: 80%
+    color: $main-font-color-light
+
+    @media (min-width: $mw-tablet)
+        margin-bottom: 80px
+
+        font-size: 130px
+
+    @media (min-width: $mw-tablet-lg)
+        margin-bottom: 127px
+
+        text-align: right
+
+.about__text
+    h3
+        margin: 0
+        margin-bottom: 20px
+
+        font-size: 24px
+        line-height: 29px
+        color: $main-font-color-dark
+
+    p
+        margin-top: 0
+        margin-bottom: 20px
+
+        font-size: 18px
+        line-height: 22px
+        color: $secondary-font-color
+
+
+    @media (min-width: $mw-tablet)
+        div
+            width: 500px
+
+        h3
+            margin-bottom: 35px
+
+            font-size: 25px
+            line-height: 30px
+
+    @media (min-width: $mw-tablet-lg)
+        display: flex
+        flex-direction: row
+        justify-content: space-between

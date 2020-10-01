@@ -1,87 +1,128 @@
 .header
-  min-height: 78px
+    position: fixed
+    top: 0
+    left: 0
+
+    width: 100%
+    min-height: 78px
+
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05)
+    background-color: $background-color
+    z-index: 11
+
+.header__logo
+    @media (min-width: $mw-tablet-lg)
+        img
+            width: 193px
+            height: 115px
+
 
 .header__wrap
-  display: flex
-  flex-direction: row
-  justify-content: space-between
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: space-between
 
-  padding: 14px 20px
+    padding: 14px 20px
 
-  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.05)
-  transition: box-shadow 100ms ease
-
-  &--opened
-    box-shadow: none
 
 .header__nav-wrap
-  width: 100%
-  height: calc(100vh - 184px)
-  padding-top: 106px
+    position: absolute
+  
+    width: 100%
+    height: calc(100vh - 184px)
+    padding-top: 106px
 
-  transform: translateX(100%)
-  transition: transform 250ms ease-out
+    transform: translateX(100%)
+    transition: transform 250ms ease-out
 
-  &--opened
-    transform: translateX(0)
+    background-color: $background-color
+
+    z-index: 10
+
+    &--opened
+        transform: translateX(0)
 
 
 .menu-btn
-  width: 28px
-  height: 28px
-  margin-top: 18px
-  padding: 0
+    width: 28px
+    height: 28px
+    margin-top: 18px
+    padding: 0
 
-  background-color: transparent
-  background-repeat: no-repeat
-  border: none
+    background-color: transparent
+    background-repeat: no-repeat
+    border: none
 
-  cursor: pointer
+    cursor: pointer
 
-  &--closed
-    background-image: url("../images/burger-icon.svg")
+    &--closed
+        background-image: url("../images/burger-icon.svg")
 
-  &--opened
-    background-image: url("../images/cross-icon.svg")
+    &--opened
+        background-image: url("../images/cross-icon.svg")
+
+    @media (min-width: $mw-tablet-lg)
+        display: none
+
+
+.desktop-nav
+    display: none
+
+    &__item
+        font-size: 18px
+        line-height: 22px
+
+        &:not(:last-child)
+            margin-right: 50px
+
+    @media (min-width: $mw-tablet-lg)
+        display: flex
+        align-items: center
+
 
 .nav__list
-  @include list-reset
+    @include list-reset
 
-  display: flex
-  flex-direction: column
-  align-items: center
+    display: flex
+    flex-direction: column
+    align-items: center
+
 
 .nav__item
-  width: 100%
-  text-align: center
-  cursor: pointer
-
-  &:not(:last-child)
-    margin-bottom: 40px
-
-  a
     width: 100%
-    display: block
+    text-align: center
+    cursor: pointer
 
-    font-size: 36px
-    line-height: 43px
+    &:not(:last-child)
+        margin-bottom: 40px
+
+    a
+        width: 100%
+        display: block
+
+        font-size: 36px
+        line-height: 43px
+
 
 .social
-  @include list-reset
+    @include list-reset
 
-  display: flex
-  justify-content: space-between
+    display: flex
+    justify-content: space-between
 
-  width: 335px
-  margin: 123px auto 0 auto
+    width: 335px
+    margin: 123px auto 0 auto
 
-  a
-    font-size: 24px
-    line-height: 29px
-    text-transform: uppercase
+    a
+        font-size: 24px
+        line-height: 29px
+        text-transform: uppercase
 
 
 .social a,
-.nav__item a
-  color: $secondary-font-color
-  text-decoration: none
+.nav__item a,
+.desktop-nav__item
+    color: $secondary-font-color
+    text-decoration: none
+

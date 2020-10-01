@@ -1,8 +1,18 @@
 body
-  margin: 0
-  font-family: "Phenomena", serif
-  background-color: $background-color
+    margin: 0
+    font-family: "Phenomena", serif
+    background-color: $background-color
+    overflow-x: hidden
 
 .container
-  max-width: 335px
-  margin: 0 auto
+    max-width: 335px
+    margin: 0 auto
+
+    @media (min-width: $mw-tablet)
+        max-width: 720px
+
+    @media (min-width: $mw-tablet-lg)
+        max-width: 710px
+
+    @media (min-width: $mw-desktop)
+        max-width: 830px
